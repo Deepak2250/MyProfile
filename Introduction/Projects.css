@@ -1,0 +1,103 @@
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(IntroBackground/IntroBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.screen{
+    position: absolute;
+    width: 200%;
+    height: 100vh;
+    top: 0;
+    background-color: black;
+    z-index: 2000;
+    visibility: visible;
+    animation: fadeout 3s ease-in-out forwards;
+    opacity: 1;
+    transition: opacity 3s ease-in-out ;
+}
+
+@keyframes fadeout {
+    
+    to{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    }
+}
+
+
+.aboutproject{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card1 {
+    opacity: 1;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 700px;
+    height: 400px;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+}
+
+.color1{
+    width: 662px;
+    height: 150px;
+    background: rgb(99,99,99);
+    background: linear-gradient(90deg, rgba(99,99,99,1) 0%, rgba(70,50,50,1) 49%, rgba(93,93,93,1) 100%);
+    border: 2px solid black;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+
+.p1{
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    word-spacing: 2px;
+    color: white;
+    margin-top:60px;
+    font-size: 20px;
+}
+
+
